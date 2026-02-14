@@ -28,22 +28,24 @@ export const useTagsStore = defineStore('tags', () => {
 
   // 初始化
   const init = async () => {
+    // 防止重复初始化：已在加载中或已有数据
+    if (loading.value || tags.value.length > 0) return
     loading.value = true
     try {
       const data = await tagsStore.getItem('tags')
       if (data && Array.isArray(data) && data.length > 0) {
         tags.value = data
-      } else {
-        // 首次使用，创建默认标签
-        for (const tag of defaultTags) {
-          tags.value.push({
-            id: generateId(),
-            ...tag,
-            createTime: new Date().toISOString()
-          })
-        }
-        await saveToStorage()
+        return // 有数据就直接用，不生成默认标签
       }
+      // 只有第一次没有任何数据时才生成默认标签
+      for (const tag of defaultTags) {
+        tags.value.push({
+          id: generateId(),
+          ...tag,
+          createTime: new Date().toISOString()
+        })
+      }
+      await saveToStorage()
     } catch (e) {
       console.error('加载标签数据失败:', e)
     } finally {
