@@ -29,15 +29,22 @@ export const useTagsStore = defineStore('tags', () => {
   // 初始化
   const init = async () => {
     // 防止重复初始化：已在加载中或已有数据
-    if (loading.value || tags.value.length > 0) return
+    if (loading.value || tags.value.length > 0) {
+      console.log('[Tags] Init skipped - loading:', loading.value, 'tags length:', tags.value.length)
+      return
+    }
     loading.value = true
+    console.log('[Tags] Init started')
     try {
       const data = await tagsStore.getItem('tags')
+      console.log('[Tags] Loaded from storage:', data)
       if (data && Array.isArray(data) && data.length > 0) {
         tags.value = data
+        console.log('[Tags] Initialized with', data.length, 'tags')
         return // 有数据就直接用，不生成默认标签
       }
       // 只有第一次没有任何数据时才生成默认标签
+      console.log('[Tags] No data found, creating default tags')
       for (const tag of defaultTags) {
         tags.value.push({
           id: generateId(),
@@ -56,9 +63,17 @@ export const useTagsStore = defineStore('tags', () => {
   // 保存到本地存储
   const saveToStorage = async () => {
     try {
-      await tagsStore.setItem('tags', tags.value)
+      // 转换为普通数组以避免响应式代理的潜在序列化问题
+      const plainTags = JSON.parse(JSON.stringify(tags.value))
+      console.log('[Tags] Saving to storage:', plainTags)
+      await tagsStore.setItem('tags', plainTags)
+      console.log('[Tags] Save completed')
+      // 验证保存是否成功
+      const saved = await tagsStore.getItem('tags')
+      console.log('[Tags] Verification - saved data:', saved)
     } catch (e) {
       console.error('保存标签数据失败:', e)
+      throw e
     }
   }
 
@@ -69,6 +84,7 @@ export const useTagsStore = defineStore('tags', () => {
 
   // 添加标签
   const addTag = async (tag) => {
+    console.log('[Tags] addTag called with:', tag)
     // 检查是否已存在同名标签
     const exists = tags.value.some(t => t.name === tag.name.trim())
     if (exists) {
@@ -83,8 +99,11 @@ export const useTagsStore = defineStore('tags', () => {
       createTime: new Date().toISOString()
     }
 
+    console.log('[Tags] New tag created:', newTag)
     tags.value.push(newTag)
+    console.log('[Tags] Tags array now has', tags.value.length, 'items')
     await saveToStorage()
+    console.log('[Tags] addTag completed')
     return newTag
   }
 
