@@ -1,0 +1,386 @@
+/* 全局暗色模式样式 */
+/* 当 html 元素有 .dark class 时，所有页面背景变为 #121212 */
+
+/* ===== Records 页面暗色模式 ===== */
+.dark .records-page {
+  background-color: #121212 !important;
+}
+
+.dark .records-page .van-nav-bar {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .van-nav-bar__title {
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .van-nav-bar .van-icon {
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .month-selector {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .month-selector .van-dropdown-menu {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .month-selector .van-dropdown-menu__bar {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .month-selector .van-dropdown-menu__title {
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .monthly-stats {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .monthly-stats .label {
+  color: #888 !important;
+}
+
+.dark .records-page .monthly-stats .value {
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .group-header {
+  background-color: #1e1e1e !important;
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .group-header .total {
+  color: #888 !important;
+}
+
+.dark .records-page .van-cell {
+  background-color: #1e1e1e !important;
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .van-cell__label {
+  color: #888 !important;
+}
+
+.dark .records-page .van-swipe-cell {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .van-popup {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .record-form .van-nav-bar {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .record-form .van-nav-bar__title {
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .record-form .van-cell-group {
+  background-color: transparent !important;
+}
+
+.dark .records-page .record-form .van-cell {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .record-form .van-field__label {
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .record-form .van-radio__label {
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .van-picker {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .van-picker__toolbar {
+  background-color: #1e1e1e !important;
+}
+
+.dark .records-page .van-picker__title {
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .van-picker-column__item {
+  color: #e5e5e5 !important;
+}
+
+.dark .records-page .van-empty__description {
+  color: #888 !important;
+}
+
+.dark .records-page .van-loading__text {
+  color: #e5e5e5 !important;
+}
+
+/* ===== Stats 页面暗色模式 ===== */
+.dark .stats-page {
+  background-color: #121212 !important;
+}
+
+.dark .stats-page .van-nav-bar {
+  background-color: #1e1e1e !important;
+}
+
+.dark .stats-page .van-nav-bar__title {
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .dimension-tabs .van-tabs__nav {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%) !important;
+}
+
+.dark .stats-page .date-nav {
+  background-color: #1e1e1e !important;
+}
+
+.dark .stats-page .date-nav span {
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .date-nav .van-icon {
+  color: #888 !important;
+}
+
+.dark .stats-page .card {
+  background-color: #1e1e1e !important;
+}
+
+.dark .stats-page .card .label {
+  color: #888 !important;
+}
+
+.dark .stats-page .card .value {
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .tag-filter {
+  background-color: #1e1e1e !important;
+}
+
+.dark .stats-page .filter-header {
+  background-color: #1e1e1e !important;
+}
+
+.dark .stats-page .filter-header span {
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .filter-content {
+  border-top-color: #333 !important;
+}
+
+.dark .stats-page .chart-section {
+  background-color: #1e1e1e !important;
+}
+
+.dark .stats-page .section-title {
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .records-section {
+  background-color: #1e1e1e !important;
+}
+
+.dark .stats-page .section-header .section-title {
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .van-cell {
+  background-color: #1e1e1e !important;
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .van-cell__label {
+  color: #888 !important;
+}
+
+.dark .stats-page .van-cell__value {
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .more-hint {
+  color: #888 !important;
+}
+
+.dark .stats-page .empty-chart {
+  color: #888 !important;
+}
+
+.dark .stats-page .van-popup {
+  background-color: #1e1e1e !important;
+}
+
+.dark .stats-page .van-picker {
+  background-color: #1e1e1e !important;
+}
+
+.dark .stats-page .van-picker__toolbar {
+  background-color: #1e1e1e !important;
+}
+
+.dark .stats-page .van-picker__title {
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .van-picker-column__item {
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .van-loading__text {
+  color: #e5e5e5 !important;
+}
+
+.dark .stats-page .van-empty__description {
+  color: #888 !important;
+}
+
+/* ===== Tags 页面暗色模式 ===== */
+.dark .tags-page {
+  background-color: #121212 !important;
+}
+
+.dark .tags-page .van-nav-bar {
+  background-color: #1e1e1e !important;
+}
+
+.dark .tags-page .van-nav-bar__title {
+  color: #e5e5e5 !important;
+}
+
+.dark .tags-page .van-nav-bar .van-icon {
+  color: #e5e5e5 !important;
+}
+
+.dark .tags-page .van-cell-group {
+  background-color: transparent !important;
+}
+
+.dark .tags-page .van-cell-group__title {
+  color: #888 !important;
+  background-color: transparent !important;
+}
+
+.dark .tags-page .van-cell {
+  background-color: #1e1e1e !important;
+  color: #e5e5e5 !important;
+}
+
+.dark .tags-page .van-cell__value {
+  color: #888 !important;
+}
+
+.dark .tags-page .van-swipe-cell {
+  background-color: #1e1e1e !important;
+}
+
+.dark .tags-page .van-action-sheet {
+  background-color: #1e1e1e !important;
+}
+
+.dark .tags-page .van-action-sheet__header {
+  color: #e5e5e5 !important;
+}
+
+.dark .tags-page .tag-form .van-cell {
+  background-color: #1e1e1e !important;
+}
+
+.dark .tags-page .tag-form .van-field__label {
+  color: #e5e5e5 !important;
+}
+
+.dark .tags-page .tag-form .van-radio__label {
+  color: #e5e5e5 !important;
+}
+
+.dark .tags-page .van-loading__text {
+  color: #e5e5e5 !important;
+}
+
+/* ===== 通用组件暗色模式 ===== */
+.dark .van-dialog {
+  background-color: #1e1e1e !important;
+}
+
+.dark .van-dialog__header {
+  color: #e5e5e5 !important;
+}
+
+.dark .van-dialog__message {
+  color: #e5e5e5 !important;
+}
+
+.dark .van-overlay {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.dark .van-button--default {
+  background-color: #2d2d2d !important;
+  color: #e5e5e5 !important;
+  border-color: #444 !important;
+}
+
+/* ===== 下拉菜单暗色模式 ===== */
+.dark .van-dropdown-item__content {
+  background-color: #1e1e1e !important;
+}
+
+.dark .van-dropdown-item__option {
+  background-color: #1e1e1e !important;
+  color: #e5e5e5 !important;
+}
+
+.dark .van-dropdown-item__option--active {
+  color: #1989fa !important;
+}
+
+.dark .van-dropdown-item__option:active {
+  background-color: #2a2a2a !important;
+}
+
+/* ===== 输入框暗色模式 ===== */
+.dark .van-field__control {
+  color: #e5e5e5 !important;
+}
+
+.dark .van-field__control::placeholder {
+  color: #666 !important;
+}
+
+/* ===== 标签暗色模式 ===== */
+.dark .van-tag--default {
+  background-color: #2d2d2d !important;
+  color: #888 !important;
+}
+
+/* ===== 单选按钮暗色模式 ===== */
+.dark .van-radio__icon--checked .van-icon {
+  background-color: #1989fa !important;
+  border-color: #1989fa !important;
+}
+
+.dark .van-radio__icon .van-icon {
+  background-color: #2d2d2d !important;
+  border-color: #444 !important;
+}
+
+/* ===== 日期选择器暗色模式 ===== */
+.dark .van-date-picker {
+  background-color: #1e1e1e !important;
+}
+
+.dark .van-picker__columns {
+  background-color: #1e1e1e !important;
+}
+
+.dark .van-hairline-unset--top-bottom {
+  background-color: #1e1e1e !important;
+}
