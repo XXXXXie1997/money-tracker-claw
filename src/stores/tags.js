@@ -67,14 +67,20 @@ export const useTagsStore = defineStore('tags', () => {
 
   // 添加标签
   const addTag = async (tag) => {
+    // 检查是否已存在同名标签
+    const exists = tags.value.some(t => t.name === tag.name.trim())
+    if (exists) {
+      throw new Error('标签已存在')
+    }
+
     const newTag = {
       id: generateId(),
-      name: tag.name,
+      name: tag.name.trim(),
       color: tag.color || presetColors[0],
       type: tag.type || 'both', // 'expense' | 'income' | 'both'
       createTime: new Date().toISOString()
     }
-    
+
     tags.value.push(newTag)
     await saveToStorage()
     return newTag

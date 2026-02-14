@@ -207,7 +207,11 @@ const saveTag = async () => {
 
     closeForm()
   } catch (e) {
-    showToast('保存失败')
+    if (e.message === '标签已存在') {
+      showToast('标签已存在')
+    } else {
+      showToast('保存失败')
+    }
   } finally {
     saving.value = false
   }
