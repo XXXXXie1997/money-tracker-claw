@@ -8,6 +8,7 @@ import 'vant/lib/index.css'
 
 // 全局样式
 import './assets/styles/main.css'
+import './assets/styles/dark.css'
 
 const app = createApp(App)
 
