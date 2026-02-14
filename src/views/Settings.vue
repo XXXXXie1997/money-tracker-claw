@@ -367,30 +367,61 @@ onMounted(async () => {
 .footer .copyright {
   margin-top: 8px;
 }
+</style>
 
-/* 暗色模式样式 */
-:global(.dark) .settings-page {
-  background-color: #1a1a1a;
+<style>
+/* 暗色模式 - Settings.vue */
+.dark .settings-page {
+  background-color: #121212 !important;
 }
 
-:global(.dark) .van-cell {
-  background-color: #2a2a2a;
-  color: #e5e5e5;
+.dark .settings-page .van-cell {
+  background-color: #1e1e1e !important;
+  color: #e5e5e5 !important;
 }
 
-:global(.dark) .van-cell-group {
-  background-color: transparent;
+.dark .settings-page .van-cell-group {
+  background-color: transparent !important;
 }
 
-:global(.dark) .van-cell__label {
-  color: #888;
+.dark .settings-page .van-cell__label {
+  color: #888 !important;
 }
 
-:global(.dark) .van-nav-bar {
-  background-color: #2a2a2a;
+.dark .settings-page .van-cell__value {
+  color: #e5e5e5 !important;
 }
 
-:global(.dark) .van-nav-bar__title {
-  color: #e5e5e5;
+.dark .settings-page .van-nav-bar {
+  background-color: #1e1e1e !important;
+}
+
+.dark .settings-page .van-nav-bar__title {
+  color: #e5e5e5 !important;
+}
+
+.dark .settings-page .confirm-content p {
+  color: #e5e5e5 !important;
+}
+
+.dark .settings-page .confirm-content .warning {
+  color: #ee0a24 !important;
+}
+
+.dark .settings-page .confirm-content .hint {
+  color: #888 !important;
+}
+
+.dark .settings-page .footer {
+  color: #888 !important;
+}
+
+.dark .settings-page .footer .copyright {
+  color: #666 !important;
+}
+
+.dark .settings-page .van-cell-group__title {
+  color: #888 !important;
+  background-color: transparent !important;
 }
 </style>

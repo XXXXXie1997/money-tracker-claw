@@ -88,6 +88,15 @@ body {
   color-scheme: dark;
 }
 
+.dark html,
+.dark body {
+  background-color: #121212 !important;
+}
+
+.dark #app {
+  background-color: #121212 !important;
+}
+
 .dark .van-cell-group--inset {
   background-color: #1e1e1e;
 }
