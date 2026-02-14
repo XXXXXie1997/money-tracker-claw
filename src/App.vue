@@ -21,11 +21,19 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const active = ref(0)
+
+// 恢复暗色模式设置
+onMounted(() => {
+  const savedDarkMode = localStorage.getItem('darkMode') === 'true'
+  if (savedDarkMode) {
+    document.documentElement.classList.add('dark')
+  }
+})
 
 // 监听路由变化更新active
 watch(
