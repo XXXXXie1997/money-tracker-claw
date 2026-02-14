@@ -96,12 +96,108 @@ watch(
 }
 
 /* 暗色模式支持 */
-:global(.dark) .app-container {
-  background-color: #121212;
+.dark .app-container {
+  background-color: #121212 !important;
 }
 
-:global(.dark) .van-tabbar {
-  border-top-color: #333;
-  background-color: #1e1e1e;
+.dark .van-tabbar {
+  border-top-color: #333 !important;
+  background-color: #1e1e1e !important;
+}
+
+.dark .van-tabbar-item {
+  background-color: #1e1e1e !important;
+}
+
+.dark .van-tabbar-item__text {
+  color: #888 !important;
+}
+
+.dark .van-tabbar-item--active .van-tabbar-item__text {
+  color: #1989fa !important;
+}
+
+/* 全局暗色模式变量 */
+.dark {
+  --van-background: #121212;
+  --van-background-2: #1e1e1e;
+  --van-background-3: #2a2a2a;
+  --van-text-color: #e5e5e5;
+  --van-text-color-2: #888;
+  --van-text-color-3: #666;
+  --van-border-color: #333;
+}
+
+.dark .van-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark .van-popup {
+  background-color: #1e1e1e !important;
+}
+
+.dark .van-dialog {
+  background-color: #1e1e1e !important;
+}
+
+.dark .van-dialog__header {
+  color: #e5e5e5 !important;
+}
+
+.dark .van-dialog__message {
+  color: #e5e5e5 !important;
+}
+
+.dark .van-loading__text {
+  color: #e5e5e5 !important;
+}
+
+.dark .van-empty__description {
+  color: #888 !important;
+}
+
+.dark .van-picker {
+  background-color: #1e1e1e !important;
+}
+
+.dark .van-picker__toolbar {
+  background-color: #1e1e1e !important;
+}
+
+.dark .van-picker__title {
+  color: #e5e5e5 !important;
+}
+
+.dark .van-picker__cancel {
+  color: #888 !important;
+}
+
+.dark .van-picker__confirm {
+  color: #1989fa !important;
+}
+
+.dark .van-picker-column__item {
+  color: #e5e5e5 !important;
+}
+
+.dark .van-picker-column__item--selected {
+  color: #1989fa !important;
+}
+
+/* 暗色模式下平板和桌面的样式 */
+@media screen and (min-width: 768px) {
+  .dark .app-container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dark .van-tabbar {
+    border-top-color: #333 !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dark .van-nav-bar {
+    background-color: #1e1e1e !important;
+  }
 }
 </style>
