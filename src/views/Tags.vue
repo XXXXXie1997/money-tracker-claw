@@ -133,7 +133,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { useTagsStore } from '@/stores/tags'
 import { useRecordsStore } from '@/stores/records'
-import { showToast, showSuccessToast } from 'vant'
+import { showToast, showSuccessToast, showFailToast } from 'vant'
 
 const tagsStore = useTagsStore()
 const recordsStore = useRecordsStore()
@@ -185,7 +185,7 @@ const editTag = (tag) => {
 
 const saveTag = async () => {
   if (!formData.value.name.trim()) {
-    showToast('请输入标签名称')
+    showFailToast('请输入标签名称')
     return
   }
 
@@ -208,9 +208,9 @@ const saveTag = async () => {
     closeForm()
   } catch (e) {
     if (e.message === '标签已存在') {
-      showToast('标签已存在')
+      showFailToast('标签已存在')
     } else {
-      showToast('保存失败')
+      showFailToast('保存失败')
     }
   } finally {
     saving.value = false
