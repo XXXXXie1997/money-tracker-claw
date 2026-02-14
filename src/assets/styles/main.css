@@ -310,6 +310,35 @@ body {
 /* Toast提示优化 */
 .van-toast {
   max-width: 70%;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: #ffffff !important;
+}
+
+.van-toast .van-toast__text {
+  color: #ffffff !important;
+}
+
+/* 亮色模式 Toast 样式 */
+:root:not(.dark) .van-toast,
+html:not(.dark) .van-toast {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #333333 !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+:root:not(.dark) .van-toast .van-toast__text,
+html:not(.dark) .van-toast .van-toast__text {
+  color: #333333 !important;
+}
+
+/* 暗色模式 Toast 样式 */
+.dark .van-toast {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  color: #ffffff !important;
+}
+
+.dark .van-toast .van-toast__text {
+  color: #ffffff !important;
 }
 
 /* 图标颜色统一 */
