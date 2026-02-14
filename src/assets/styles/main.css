@@ -1,0 +1,321 @@
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f7f8fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* 响应式字体大小 */
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* 安全区域适配 (iOS) */
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-top: env(safe-area-inset-top);
+}
+
+/* 页面内容区域 - 为底部导航留出空间 */
+.page-content {
+  padding-bottom: 60px;
+  min-height: calc(100vh - 60px);
+}
+
+/* 卡片样式优化 */
+.van-cell-group--inset {
+  margin: 12px 16px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* 空状态样式 */
+.van-empty {
+  padding: 48px 0;
+}
+
+/* 加载状态样式 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 暗色模式支持 */
+.dark {
+  background-color: #121212;
+  color-scheme: dark;
+}
+
+.dark .van-cell-group--inset {
+  background-color: #1e1e1e;
+}
+
+.dark .van-cell {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.dark .van-cell__label {
+  color: #a0a0a0;
+}
+
+.dark .van-field__label {
+  color: #e0e0e0;
+}
+
+.dark .van-field input,
+.dark .van-field textarea {
+  color: #e0e0e0;
+}
+
+.dark .van-nav-bar {
+  background-color: #1e1e1e;
+}
+
+.dark .van-nav-bar__title {
+  color: #e0e0e0;
+}
+
+.dark .van-tabbar {
+  background-color: #1e1e1e;
+}
+
+.dark .van-tabbar-item {
+  color: #a0a0a0;
+}
+
+.dark .van-popup {
+  background-color: #1e1e1e;
+}
+
+.dark .van-action-sheet__header {
+  color: #e0e0e0;
+}
+
+.dark .van-dialog {
+  background-color: #1e1e1e;
+}
+
+.dark .van-dialog__header {
+  color: #e0e0e0;
+}
+
+.dark .van-dialog__message {
+  color: #a0a0a0;
+}
+
+.dark .van-dropdown-menu {
+  background-color: #1e1e1e;
+}
+
+.dark .van-dropdown-menu__title {
+  color: #e0e0e0;
+}
+
+.dark .van-dropdown-item__content {
+  background-color: #1e1e1e;
+}
+
+.dark .van-dropdown-item__option {
+  color: #e0e0e0;
+}
+
+.dark .van-picker {
+  background-color: #1e1e1e;
+}
+
+.dark .van-picker__title {
+  color: #e0e0e0;
+}
+
+.dark .van-picker__columns {
+  background-color: #1e1e1e;
+}
+
+.dark .van-loading__text {
+  color: #a0a0a0;
+}
+
+/* 响应式布局优化 */
+@media screen and (min-width: 768px) {
+  /* 平板和桌面布局 */
+  .app-container {
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .van-tabbar {
+    max-width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1px solid #ebedf0;
+  }
+  
+  .dark .van-tabbar {
+    border-top-color: #333;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* 桌面布局 */
+  .app-container {
+    max-width: 700px;
+    margin-top: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: calc(100vh - 40px);
+  }
+  
+  .van-nav-bar {
+    border-bottom: 1px solid #ebedf0;
+  }
+  
+  .dark .van-nav-bar {
+    border-bottom-color: #333;
+  }
+}
+
+/* 过渡动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 点击反馈效果 */
+.van-cell:active {
+  background-color: #f2f3f5;
+}
+
+.dark .van-cell:active {
+  background-color: #2a2a2a;
+}
+
+/* 更好的触摸区域 */
+.van-button {
+  min-height: 44px;
+}
+
+/* 图表自适应 */
+.chart-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 防止长文本溢出 */
+.van-cell__value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60%;
+}
+
+/* 标签样式增强 */
+.van-tag {
+  user-select: none;
+}
+
+/* 表单输入优化 */
+.van-field__control {
+  font-size: 16px;
+}
+
+/* 底部安全区域 */
+.van-tabbar {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 金额显示样式 */
+.amount {
+  font-variant-numeric: tabular-nums;
+}
+
+.amount.expense {
+  color: #ee0a24;
+}
+
+.amount.income {
+  color: #07c160;
+}
+
+.dark .amount.expense {
+  color: #ff6b6b;
+}
+
+.dark .amount.income {
+  color: #4cd964;
+}
+
+/* Loading遮罩层优化 */
+.van-overlay {
+  backdrop-filter: blur(2px);
+}
+
+/* Toast提示优化 */
+.van-toast {
+  max-width: 70%;
+}
+
+/* 图标颜色统一 */
+.icon-primary {
+  color: #1989fa;
+}
+
+.icon-success {
+  color: #07c160;
+}
+
+.icon-danger {
+  color: #ee0a24;
+}
+
+.icon-warning {
+  color: #ff976a;
+}
